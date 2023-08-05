@@ -15,7 +15,7 @@
 
 
 <p align="center">
- <a href="https://linkedin.com/in/saifcharitraa" target="_blank">
+ <a href="https://www.linkedin.com/in/charitra-shrestha-78245b270/" target="_blank">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="charitraa"/>
  </a>
  <a href="https://dev.to/charitraa" target="_blank">
