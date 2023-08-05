@@ -49,7 +49,8 @@
 <p>
  <img align="right" width="350" src="programmer.gif" alt="Coding gif" />
 
-🔭&emsp;I’m currently studying BSc(Hons) CS And SE at University of Bedfordshire. <br/><br/>
+🔭&emsp;I’m currently studying BSc(Hons) CS And SE at University of Bedfordshire.<br/><br/>
+🌱&emsp;I’m currently focusing on Full Stack.<br/><br/>
 ✌️&emsp;Enjoy to do programming and sharing knowledge. <br/><br/>
 ⚡&emsp;Fun fact: I love Sports, especially football. <br/><br/>
 ❤️&emsp;Love to writing code and learning new skills. <br/><br/>
