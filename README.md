@@ -1,8 +1,13 @@
+
 <a href="https://komarev.com/ghpvc/?username=charitraa">
   <img align="right" src="https://komarev.com/ghpvc/?username=charitraa&label=Visitors&color=blue&style=flat" alt="Profile visitor" />
-</a>
+</a
 
-<a href="https://wakatime.com/@8b338e0c-5f4d-4b55-9596-6a45dec526a1"><img align="left" src="https://wakatime.com/badge/user/8b338e0c-5f4d-4b55-9596-6a45dec526a1.svg" alt="Total time coded since Aug 5 2023" /></a>
+  [![LeetCode user charitra](https://img.shields.io/badge/dynamic/json?style=for-the-badge&labelColor=black&color=%23ffa116&label=Solved&query=solvedOverTotal&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fcharitraa&logo=leetcode&logoColor=yellow)](https://leetcode.com/charitraa/)
+
+<p align="center"><a href="https://wakatime.com/@8b338e0c-5f4d-4b55-9596-6a45dec526a1"><img src="https://wakatime.com/badge/user/8b338e0c-5f4d-4b55-9596-6a45dec526a1.svg" alt="Total time coded since Aug 5 2023" /></a>
+  </p>
+    
 <!-- Intro  -->
 <h3 align="center">
         <samp>&gt; Hey There!, I am
