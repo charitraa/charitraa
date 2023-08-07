@@ -13,6 +13,7 @@
         <samp>&gt; Hey There!, I am
                 <b>Charitra Shrestha</b>
         </samp>
+  
 </h3>
 <p align="center" >
   <a href="https://github.com/Ratheshan03/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=Computer+Science+Undergraduate;Full+Stack+Software+Engineer;Learning+Something+New;&color=red&center=true&width=500&height=50"></a>
