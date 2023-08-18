@@ -93,7 +93,7 @@
 ## Top Open Source -
 [![Online Hotel Booking System ](https://github-readme-stats.vercel.app/api/pin/?username=charitraa&repo=Online-Hotel-Booking-System&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/charitraa/Online-Hotel-Booking-System)
 [![Amazon Project](https://github-readme-stats.vercel.app/api/pin/?username=charitraa&repo=Amazon-Project&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/charitraa/Amazon-Project)
-[![Rock Paper Scissors](https://github-readme-stats.vercel.app/api/pin/?username=charitraa&repo=rock-paper-scissors&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/charitraa/rock-paper-scissors)
+[![Coffee Website](https://github-readme-stats.vercel.app/api/pin/?username=charitraa&repo=Coffee-Website&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/charitraa/Coffee-Website)
 [![Artificial Intelligence Project](https://github-readme-stats.vercel.app/api/pin/?username=charitraa&repo=Artificial-Intelligence-Project&border_color=7F3FBF&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=7F3FBF)](https://github.com/charitraa/Artificial-Intelligence-Project)
 
 <p align="left">
