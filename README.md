@@ -16,7 +16,7 @@
   
 </h3>
 <p align="center" >
-  <a href="https://github.com/Ratheshan03/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=Computer+Science+Undergraduate;Full+Stack+Software+Engineer;Learning+Something+New;&color=red&center=true&width=500&height=50"></a>
+  <a href="https://github.com/Ratheshan03/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=Computer+Science+Undergraduate;Full+Stack+Software+Engineer;&color=red&center=true&width=500&height=50"></a>
 </p>
 
 
@@ -54,7 +54,7 @@
  
 <p>
   <br/>
- <img align="right" width="350" src="programmer.gif" alt="Coding gif" />
+ <img align="right" width="350" src="06f21a161921919.63cd7887d0a70.gif" alt="Coding gif" />
 
 🔭&emsp;I’m currently studying BSc(Hons) CS And SE at University of Bedfordshire.<br/><br/>
 🌱&emsp;I’m currently focusing on Full Stack.<br/><br/>
