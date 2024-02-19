@@ -124,4 +124,4 @@
   <br/>
 </a>
 
-![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake.svg)
+![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
