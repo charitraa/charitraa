@@ -123,5 +123,7 @@
   <a href="https://github.com/charitraa"><img alt="Charitra Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=charitraa&langs_count=8&layout=compact&theme=react&border_color=7F3FBF&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866" height="192px" width="49.5%"/></a>
   <br/>
 </a>
+[![charitraa's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=charitraa&custom_title=This%20is%20a%20title&hide_border=true)](https://github.com/charitraa/github-readme-activity-graph)
+
 
 ![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
