@@ -126,4 +126,4 @@
 
 [![charitraa's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=charitraa&theme=github-compact&customtitle=Day%20Graph%%20title&hide_border=true)](https://github.com/charitraa/github-readme-activity-graph)
 
-![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake.svg)
+![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
