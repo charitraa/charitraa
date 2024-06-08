@@ -50,13 +50,13 @@
 <br />
 
 <!-- About Section -->
- # About me
+ # About Me
  
 <p>
   <br/>
  <img align="right" width="360" src="06f21a161921919.63cd7887d0a70.gif" alt="Coding gif"/>
 
-🔭&emsp;I’m currently studying BSc(Hons) CS And SE at University of Bedfordshire.<br/><br/>
+🔭&emsp;I’m currently studying BSc(Hons) CS and SE at University of Bedfordshire.<br/><br/>
 🌱&emsp;I’m currently focusing on Full Stack.<br/><br/>
 ✌️&emsp;Enjoy to do programming and sharing knowledge. <br/><br/>
 ⚡&emsp;Fun fact: I love Music, Sports especially football. <br/><br/>
