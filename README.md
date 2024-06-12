@@ -30,7 +30,7 @@
  <a href="https://twitter.com/ROYALXGAMER9" target="_blank">
   <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
  </a>
- <a href="https://www.instagram.com/stha_ravii/" target="_blank">
+ <a href="https://www.instagram.com/_charitraa_/" target="_blank">
   <img src="https://img.shields.io/badge/Instagram-fe4164?style=for-the-badge&logo=instagram&logoColor=white" alt="charitraa" />
  </a> 
  <a href="https://www.facebook.com/stharabi.charitra/" target="_blank">
