@@ -136,3 +136,16 @@
 [![charitraa's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=charitraa&theme=github-compact&customtitle=Day%20Graph%%20title&hide_border=true)](https://github.com/charitraa/github-readme-activity-graph)
 
 ![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
+
+<p align="center">
+  <a href="https://wakatime.com"><img src="https://wakatime.com/share/@stha_ravii/297abccd-48e2-4685-84a8-b3b6a9579b5f.png" /></a>
+</p>
+<br/>
+<br/>
+
+
+<p align="center">
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@stha_ravii/f79d223f-442c-491a-bead-85e3d6246f23.png" /></a>
+</p>
+<br/>
+<br/>
