@@ -138,7 +138,7 @@
 ![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
 
 <p align="center">
-  <a href="https://wakatime.com"><img src="https://wakatime.com/share/@stha_ravii/297abccd-48e2-4685-84a8-b3b6a9579b5f.png" /></a>
+  <a href="https://wakatime.com"><img src="https://wakatime.com/share/@stha_ravii/735b052b-d9dd-45c3-82f3-16d17b4effa4.png" /></a>
 </p>
 <br/>
 <br/>
