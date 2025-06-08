@@ -142,10 +142,3 @@
 </p>
 <br/>
 <br/>
-
-
-<p align="center">
-<a href="https://wakatime.com"><img src="https://wakatime.com/share/@stha_ravii/f79d223f-442c-491a-bead-85e3d6246f23.png" /></a>
-</p>
-<br/>
-<br/>
