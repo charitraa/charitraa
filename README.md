@@ -63,7 +63,7 @@
 ✌️&emsp;Enjoy to do programming and sharing knowledge. <br/><br/>
 ⚡&emsp;Fun fact: I love Music, Sports especially football. <br/><br/>
 ❤️&emsp;Love to writing code and learning new skills. <br/><br/>
-📧&emsp;Reach me anytime: stharabi9862187405@gmail.com<br/><br/>
+📧&emsp;Reach me anytime: code@charitrashrestha.com.np<br/><br/>
 💬&emsp;Ask me about anything [here](https://github.com/charitraa/charitraa/issues)
 
 </p>
