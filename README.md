@@ -121,6 +121,4 @@ JavaScript   25 mins               ▓░░░░░░░░░░░░░░
 
 ![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
 
-
-<br/>
-<br/>
+![Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
