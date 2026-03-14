@@ -99,7 +99,7 @@
 
 ## ⏱ Coding Activity
 
-![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=stha_ravii)
+![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=stha_ravii&theme=github_dark&hide_border=true)
 
 <!--START_SECTION:waka-->
 
@@ -116,12 +116,6 @@ JavaScript   25 mins               ▓░░░░░░░░░░░░░░
 ```
 
 <!--END_SECTION:waka-->
-
-<p>
-  <img src="https://wakatime.com/share/@stha_ravii/735b052b-d9dd-45c3-82f3-16d17b4effa4.png"/>
-</p>
-<br/>
-
 
 [![charitraa's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=charitraa&theme=github-compact&customtitle=Day%20Graph%%20title&hide_border=true)](https://github.com/charitraa/github-readme-activity-graph)
 
