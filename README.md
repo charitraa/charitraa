@@ -102,6 +102,19 @@
 ![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=stha_ravii)
 
 <!--START_SECTION:waka-->
+
+```txt
+From: 06 March 2026 - To: 13 March 2026
+
+Total Time: 12 hrs 51 mins
+
+TypeScript   4 hrs 37 mins         █████████░░░░░░░░░░░░░░░░   35.79 %
+CSS          3 hrs 55 mins         ███████▓░░░░░░░░░░░░░░░░░   30.29 %
+HTML         2 hrs 5 mins          ████░░░░░░░░░░░░░░░░░░░░░   16.19 %
+Python       1 hr 35 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.32 %
+JavaScript   25 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.25 %
+```
+
 <!--END_SECTION:waka-->
 
 <p>
