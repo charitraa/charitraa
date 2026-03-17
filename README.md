@@ -17,7 +17,7 @@
 </h3>
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&width=500&height=50&lines=Computer+Science+Undergraduate;Junior+Software+Developer;Full+Stack+Software+Developer;">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&width=500&height=50&lines=Computer+Science+graduate;Junior+Software+Developer;Full+Stack+Software+Developer;">
   </a>
 </p>
 
