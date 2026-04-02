@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 23 March 2026 - To: 30 March 2026
+From: 24 March 2026 - To: 31 March 2026
 
-Total Time: 5 hrs 20 mins
+Total Time: 4 hrs 56 mins
 
-Python       1 hr 46 mins          ████████▒░░░░░░░░░░░░░░░░   33.28 %
-TypeScript   1 hr 40 mins          ████████░░░░░░░░░░░░░░░░░   31.37 %
-Kotlin       52 mins               ████░░░░░░░░░░░░░░░░░░░░░   16.27 %
-JavaScript   23 mins               ██░░░░░░░░░░░░░░░░░░░░░░░   07.49 %
-Text         11 mins               █░░░░░░░░░░░░░░░░░░░░░░░░   03.51 %
+TypeScript   2 hrs 39 mins         █████████████▒░░░░░░░░░░░   53.86 %
+Python       1 hr 28 mins          ███████▒░░░░░░░░░░░░░░░░░   29.96 %
+JavaScript   23 mins               ██░░░░░░░░░░░░░░░░░░░░░░░   08.08 %
+JSON         6 mins                ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.33 %
+Git Config   5 mins                ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.91 %
 ```
 
 <!--END_SECTION:waka-->
