@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 20 April 2026 - To: 27 April 2026
+From: 21 April 2026 - To: 28 April 2026
 
-Total Time: 6 hrs 39 mins
+Total Time: 6 hrs 43 mins
 
-TypeScript   4 hrs 41 mins         █████████████████▓░░░░░░░   70.18 %
-Dart         56 mins               ███▓░░░░░░░░░░░░░░░░░░░░░   14.05 %
-Python       47 mins               ███░░░░░░░░░░░░░░░░░░░░░░   11.87 %
-JavaScript   10 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.51 %
-Bash         1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.36 %
+Dart         2 hrs 58 mins         ███████████░░░░░░░░░░░░░░   44.06 %
+TypeScript   2 hrs 36 mins         █████████▓░░░░░░░░░░░░░░░   38.56 %
+Python       1 hr 6 mins           ████░░░░░░░░░░░░░░░░░░░░░   16.49 %
+Other        1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.37 %
+Git Config   1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.28 %
 ```
 
 <!--END_SECTION:waka-->
