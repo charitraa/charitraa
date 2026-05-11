@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 01 May 2026 - To: 08 May 2026
+From: 02 May 2026 - To: 09 May 2026
 
-Total Time: 19 hrs 13 mins
+Total Time: 16 hrs 26 mins
 
-Dart         15 hrs 47 mins        ████████████████████▓░░░░   82.08 %
-TypeScript   2 hrs 50 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.79 %
-Python       33 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
-Other        1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 %
+Dart         15 hrs 47 mins        ████████████████████████░   96.11 %
+TypeScript   35 mins               █░░░░░░░░░░░░░░░░░░░░░░░░   03.64 %
+Python       1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.17 %
 Kotlin       0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.05 %
+Markdown     0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.02 %
 ```
 
 <!--END_SECTION:waka-->
