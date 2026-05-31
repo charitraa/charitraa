@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 21 May 2026 - To: 28 May 2026
+From: 22 May 2026 - To: 29 May 2026
 
-Total Time: 16 hrs 37 mins
+Total Time: 14 hrs 29 mins
 
-PHP                        7 hrs 30 mins         ███████████░░░░░░░░░░░░░░   43.75 %
-TypeScript                 3 hrs 7 mins          ████▓░░░░░░░░░░░░░░░░░░░░   18.22 %
-Dart                       1 hr 22 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.04 %
-HTML                       56 mins               █▒░░░░░░░░░░░░░░░░░░░░░░░   05.50 %
-Python                     48 mins               █░░░░░░░░░░░░░░░░░░░░░░░░   04.66 %
+PHP                        7 hrs 29 mins         ████████████▓░░░░░░░░░░░░   50.56 %
+TypeScript                 3 hrs 17 mins         █████▓░░░░░░░░░░░░░░░░░░░   22.16 %
+Dart                       49 mins               █▒░░░░░░░░░░░░░░░░░░░░░░░   05.56 %
+Python                     34 mins               █░░░░░░░░░░░░░░░░░░░░░░░░   03.82 %
+HTML                       23 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.68 %
 ```
 
 <!--END_SECTION:waka-->
