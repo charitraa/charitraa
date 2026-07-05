@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 25 June 2026 - To: 02 July 2026
+From: 26 June 2026 - To: 03 July 2026
 
-Total Time: 9 hrs 9 mins
+Total Time: 7 hrs 48 mins
 
-Python            2 hrs 12 mins         ██████░░░░░░░░░░░░░░░░░░░   23.92 %
-Dart              1 hr 51 mins          █████░░░░░░░░░░░░░░░░░░░░   20.05 %
-HTML              1 hr 42 mins          ████▓░░░░░░░░░░░░░░░░░░░░   18.44 %
-TypeScript        49 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   08.85 %
-Markdown          35 mins               █▓░░░░░░░░░░░░░░░░░░░░░░░   06.32 %
+Python            2 hrs 12 mins         ███████░░░░░░░░░░░░░░░░░░   28.02 %
+Dart              1 hr 51 mins          ██████░░░░░░░░░░░░░░░░░░░   23.49 %
+HTML              48 mins               ██▓░░░░░░░░░░░░░░░░░░░░░░   10.30 %
+Markdown          34 mins               █▓░░░░░░░░░░░░░░░░░░░░░░░   07.24 %
+Unity3D Asset     33 mins               █▓░░░░░░░░░░░░░░░░░░░░░░░   07.05 %
 ```
 
 <!--END_SECTION:waka-->
