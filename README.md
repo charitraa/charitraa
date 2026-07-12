@@ -58,14 +58,14 @@
   <br/>
  <img align="right" width="360" src="06f21a161921919.63cd7887d0a70.gif" alt="Coding gif"/>
 
-🔭&emsp;I’m currently studying BSc(Hons) CS and SE at University of Bedfordshire.<br/><br/>
-🌱&emsp;I’m currently focusing on Full Stack.<br/><br/>
+🎓&emsp;Graduated BSc(Hons) Computer Science and Software Engineering, University of Bedfordshire.<br/><br/>
+💼&emsp;Software Developer at YakshaSoft, building web and mobile apps.<br/><br/>
+🌱&emsp;I'm currently focusing on Full Stack development and web security.<br/><br/>
 ✌️&emsp;Enjoy to do programming and sharing knowledge. <br/><br/>
 ⚡&emsp;Fun fact: I love Music, Sports especially football. <br/><br/>
 ❤️&emsp;Love to writing code and learning new skills. <br/><br/>
 📧&emsp;Reach me anytime: code@charitrashrestha.com.np<br/><br/>
 💬&emsp;Ask me about anything [here](https://github.com/charitraa/charitraa/issues)
-
 </p>
 
 <br/>
