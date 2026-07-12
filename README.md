@@ -101,6 +101,8 @@
 
 ![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=stha_ravii&theme=github_dark&hide_border=true)
 
+![WakaTime Metrics](https://raw.githubusercontent.com/charitraa/charitraa/master/metrics.plugin.wakatime.svg)
+
 <!--START_SECTION:waka-->
 
 ```txt
