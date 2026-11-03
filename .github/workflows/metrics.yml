@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule:
-    - cron: "0 0 * * *"  # runs daily
+    - cron: "43 0 * * *"  # daily, off the busy top of the hour
   workflow_dispatch:
 jobs:
   github-metrics:

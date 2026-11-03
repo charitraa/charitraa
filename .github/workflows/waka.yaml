@@ -2,7 +2,7 @@ name: WakaTime Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs daily
+    - cron: "13 0 * * *"   # daily, off the busy top of the hour
   workflow_dispatch:
 
 jobs:
