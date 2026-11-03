@@ -104,15 +104,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 23 October 2026 - To: 30 October 2026
+From: 26 October 2026 - To: 02 November 2026
 
-Total Time: 43 mins
+Total Time: 1 hr 52 mins
 
-Apache Config   16 mins               █████████░░░░░░░░░░░░░░░░   36.10 %
-TypeScript      11 mins               ██████░░░░░░░░░░░░░░░░░░░   24.16 %
-C               9 mins                ████▓░░░░░░░░░░░░░░░░░░░░   19.23 %
-Other           3 mins                ██░░░░░░░░░░░░░░░░░░░░░░░   08.36 %
-Python          2 mins                █░░░░░░░░░░░░░░░░░░░░░░░░   04.29 %
+JSON            1 hr                  █████████████░░░░░░░░░░░░   52.18 %
+Apache Config   16 mins               ███▓░░░░░░░░░░░░░░░░░░░░░   14.52 %
+TypeScript      10 mins               ██▒░░░░░░░░░░░░░░░░░░░░░░   08.80 %
+C               9 mins                ██░░░░░░░░░░░░░░░░░░░░░░░   07.73 %
+Markdown        6 mins                █▒░░░░░░░░░░░░░░░░░░░░░░░   05.72 %
 ```
 
 <!--END_SECTION:waka-->
