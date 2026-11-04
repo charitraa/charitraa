@@ -2,6 +2,8 @@ name: manual run
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '27 1 * * *'   # redraw the contribution snake daily, off the busy top of the hour
 
 jobs:
   generate:
