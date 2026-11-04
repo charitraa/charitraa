@@ -1,105 +1,123 @@
+<!-- Header -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0f3d2e,100:00ff9c&height=220&section=header&text=Charitra%20Shrestha&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=Software%20Developer%20%C2%B7%20Kathmandu%2C%20Nepal%20%F0%9F%87%B3%F0%9F%87%B5&descSize=18&descAlignY=60&animation=fadeIn" alt="Charitra Shrestha" />
+</p>
 
-<a href="https://komarev.com/ghpvc/?username=charitraa">
-  <img align="right" src="https://komarev.com/ghpvc/?username=charitraa&label=Visitors&color=blue&style=flat" alt="Profile visitor" />
-</a
-
-  [![LeetCode user charitra](https://img.shields.io/badge/dynamic/json?style=for-the-badge&labelColor=black&color=%23ffa116&label=Solved&query=solvedOverTotal&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fcharitraa&logo=leetcode&logoColor=yellow)](https://leetcode.com/charitraa/)
-
-<p align="center"><a href="https://wakatime.com/@8b338e0c-5f4d-4b55-9596-6a45dec526a1"><img src="https://wakatime.com/badge/user/8b338e0c-5f4d-4b55-9596-6a45dec526a1.svg" alt="Total time coded since Aug 5 2023" /></a>
-  </p>
-    
-<!-- Intro  -->
-<h3 align="center">
-        <samp>&gt; Hey There!, I am
-                <b>Charitra Shrestha</b>
-        </samp>
-  
-</h3>
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&width=500&height=50&lines=Computer+Science+graduated;Junior+Software+Developer;Full+Stack+Software+Developer;">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=900&color=00FF9C&center=true&vCenter=true&width=620&height=48&lines=%24+whoami+%E2%86%92+full-stack+developer;Building+NepLang%3A+a+programming+language+in+Nepali;Django+%C2%B7+React+%C2%B7+TypeScript+%C2%B7+Flutter;Automating+a+YouTube+channel+with+AI+%F0%9F%A4%96;Linux+%26+web+security+on+the+side+%F0%9F%90%A7" alt="Typing SVG" />
   </a>
 </p>
-
 
 <p align="center">
- <a href="https://www.linkedin.com/in/charitra-shrestha-78245b270/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="charitraa"/>
- </a>
- <a href="https://dev.to/charitraa" target="_blank">
-  <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt="charitraa" />
- </a>
- <a href="https://twitter.com/ROYALXGAMER9" target="_blank">
-  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
- </a>
- <a href="https://www.instagram.com/_charitraa_/" target="_blank">
-  <img src="https://img.shields.io/badge/Instagram-fe4164?style=for-the-badge&logo=instagram&logoColor=white" alt="charitraa" />
- </a> 
- <a href="https://www.facebook.com/stharabi.charitra/" target="_blank">
-  <img src="https://img.shields.io/badge/Facebook-20BEFF?&style=for-the-badge&logo=facebook&logoColor=white" alt="charitraa"  />
-  </a> 
-   <a href="https://www.youtube.com/@nooehack4073/" target="_blank">
-  <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"  />
-  </a> 
-    <a href="https://www.tiktok.com/@stha_ravii" target="_blank">
-  <img src="https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white"  />
-  </a>
-  <a href="https://www.reddit.com/user/Choice-Eggplant-5900" target="_blank">
-  <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" />
-  </a>
-  
-</p>
-<br />
-
-<!-- About Section -->
- # About Me
- 
-<p>
-  <br/>
- <img align="right" width="360" src="06f21a161921919.63cd7887d0a70.gif" alt="Coding gif"/>
-
-🎓&emsp;Graduated BSc(Hons) Computer Science and Software Engineering, University of Bedfordshire.<br/><br/>
-💼&emsp;Software Developer at YakshaSoft, building web and mobile apps.<br/><br/>
-🌱&emsp;I'm currently focusing on Full Stack development and web security.<br/><br/>
-✌️&emsp;Enjoy to do programming and sharing knowledge. <br/><br/>
-⚡&emsp;Fun fact: I love Music, Sports especially football. <br/><br/>
-❤️&emsp;Love to writing code and learning new skills. <br/><br/>
-📧&emsp;Reach me anytime: code@charitrashrestha.com.np<br/><br/>
-💬&emsp;Ask me about anything [here](https://github.com/charitraa/charitraa/issues)
+  <a href="https://www.charitrashrestha.com.np/"><img src="https://img.shields.io/badge/Portfolio-00FF9C?style=flat-square&logo=googlechrome&logoColor=black" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/charitra-shrestha-78245b270/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:code@charitrashrestha.com.np"><img src="https://img.shields.io/badge/Email-1f2937?style=flat-square&logo=maildotru&logoColor=00FF9C" alt="Email" /></a>
+  <a href="https://dev.to/charitraa"><img src="https://img.shields.io/badge/dev.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white" alt="dev.to" /></a>
+  <a href="https://www.youtube.com/@NooeHack"><img src="https://img.shields.io/badge/Nooe%20Hack-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube Nooe Hack" /></a>
+  <a href="https://www.instagram.com/_charitraa_/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram" /></a>
+  <a href="https://twitter.com/ROYALXGAMER9"><img src="https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
 </p>
 
-<br/>
-<br/>
-<br/>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=charitraa&label=profile%20views&color=00ff9c&style=flat-square" alt="Profile views" />
+  <a href="https://wakatime.com/@8b338e0c-5f4d-4b55-9596-6a45dec526a1"><img src="https://wakatime.com/badge/user/8b338e0c-5f4d-4b55-9596-6a45dec526a1.svg?style=flat-square" alt="Total time coded since Aug 5 2023" /></a>
+  <a href="https://leetcode.com/u/charitraa/"><img src="https://img.shields.io/badge/dynamic/json?style=flat-square&labelColor=1f2937&color=ffa116&label=LeetCode%20solved&query=solvedOverTotal&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fcharitraa&logo=leetcode&logoColor=ffa116" alt="LeetCode" /></a>
+</p>
 
-## Languages and Tools
-<br/>
+---
 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
-![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)
-![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Kali](https://img.shields.io/badge/Kali_Linux-268BEE?style=for-the-badge&logo=kalilinux&logoColor=white)
+### `> cat about.md`
 
-## ⏱ Coding Activity
+```bash
+charitra@kathmandu:~$ whoami
+  name      : Charitra Shrestha
+  role      : Software Developer @ YakshaSoft  (web + mobile)
+  degree    : BSc (Hons) Computer Science & Software Engineering, University of Bedfordshire
+  focus     : full-stack development, web security, automation
+  building  : NepLang  ·  EducationERP  ·  AI-powered content pipelines
+  off-duty  : football ⚽  music 🎧  making Linux tutorials on YouTube 🐧
 
-![WakaTime Metrics](https://raw.githubusercontent.com/charitraa/charitraa/master/metrics.plugin.wakatime.svg)
+charitra@kathmandu:~$ echo $CONTACT
+  code@charitrashrestha.com.np   |   ask me anything → github.com/charitraa/charitraa/issues
+```
+
+---
+
+### `> ls ~/projects --featured`
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🇳🇵 <a href="https://github.com/charitraa/Nepa">NepLang</a></h4>
+      A small programming language for Nepali developers, with keywords in romanized Nepali.<br/>
+      <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" alt="C" />
+      <img src="https://img.shields.io/badge/language%20design-interpreter-00ff9c?style=flat-square" alt="language design" />
+    </td>
+    <td width="50%" valign="top">
+      <h4>🏫 EducationERP</h4>
+      A modular school ERP: students, academics, finance and HR, as an
+      <a href="https://github.com/charitraa/EducationERPApi">API</a>, an
+      <a href="https://github.com/charitraa/EducationERPAdmin">admin portal</a> and a
+      <a href="https://github.com/charitraa/EducationERPStudent">student app</a>.<br/>
+      <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🤖 Nooe Knows: AI video pipeline</h4>
+      One animated story a day, written, checked, animated in Three.js and scheduled to four platforms by a GitHub Actions + Claude pipeline.
+      <a href="https://www.youtube.com/@Nooe_Films">Watch the channel</a>.<br/>
+      <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js" />
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+    </td>
+    <td width="50%" valign="top">
+      <h4>✍️ <a href="https://github.com/charitraa/Blog_Server">Mindful Blog</a></h4>
+      Full-stack blog with a Django REST backend and a daily, AI-written post that publishes itself.<br/>
+      <img src="https://img.shields.io/badge/Django%20REST-A30000?style=flat-square&logo=django&logoColor=white" alt="Django REST" />
+      <img src="https://img.shields.io/badge/automation-daily-00ff9c?style=flat-square" alt="daily automation" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🐍 <a href="https://github.com/charitraa/Python_Script">Python_Script</a></h4>
+      A collection of Python scripts that grows every day, generated and sorted automatically.<br/>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/Gemini%20API-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini API" />
+    </td>
+    <td width="50%" valign="top">
+      <h4>🌐 <a href="https://www.charitrashrestha.com.np/">charitrashrestha.com.np</a></h4>
+      My portfolio: projects, writing and contact, built with TypeScript.<br/>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+    </td>
+  </tr>
+</table>
+
+---
+
+### `> cat ~/.stack`
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=c,python,js,ts,php,dart,html,css&theme=dark&perline=8" alt="Languages" /><br/>
+  <img src="https://skillicons.dev/icons?i=django,react,nodejs,express,flutter,bootstrap,wordpress,threejs&theme=dark&perline=8" alt="Frameworks" /><br/>
+  <img src="https://skillicons.dev/icons?i=mysql,mongodb,sqlite,git,githubactions,linux,kali,vscode&theme=dark&perline=8" alt="Tools" />
+</p>
+
+---
+
+### `> top --user charitraa`
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/00c97b/charitraa" width="100%" alt="Contribution chart" />
+</p>
+
+### `> uptime --coding`
+
+![WakaTime Metrics](https://raw.githubusercontent.com/charitraa/charitraa/main/metrics.plugin.wakatime.svg)
 
 <!--START_SECTION:waka-->
 
@@ -117,8 +135,20 @@ Markdown        6 mins                █▒░░░░░░░░░░░░
 
 <!--END_SECTION:waka-->
 
-[![charitraa's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=charitraa&theme=github-compact&customtitle=Day%20Graph%%20title&hide_border=true)](https://github.com/charitraa/github-readme-activity-graph)
+---
 
-![snake animation](https://github.com/charitraa/charitraa/blob/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg)
+### `> ./snake --eat contributions`
 
-![Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/charitraa/charitraa/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/charitraa/charitraa/manual-run-output/only-svg/github-contribution-grid-snake.svg" />
+    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/charitraa/charitraa/manual-run-output/only-svg/github-contribution-grid-snake-dark.svg" />
+  </picture>
+</p>
+
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev quote" />
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff9c,60:0f3d2e,100:0d1117&height=120&section=footer" width="100%" alt="" />
