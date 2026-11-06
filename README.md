@@ -187,10 +187,6 @@ Games finished: 0
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/journey-light.svg"/><img src="art/journey.svg" width="100%" alt="Language journey"/></picture></p>
 <!-- /ART:journey -->
 
-<!-- ART:mood -->
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/mood-light.svg"/><img src="art/mood.svg" width="100%" alt="Commit mood"/></picture></p>
-<!-- /ART:mood -->
-
 <!-- ART:city -->
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/city-light.svg"/><img src="art/city.svg" width="100%" alt="Contribution city"/></picture></p>
 <!-- /ART:city -->
