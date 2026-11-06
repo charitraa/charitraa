@@ -100,27 +100,50 @@ def chess_render(st):
     (ROOT / 'art').mkdir(exist_ok=True)
     (ROOT / 'art' / 'chess.svg').write_text(chess_svg(board, last))
     (ROOT / 'art' / 'chess-light.svg').write_text(chess_svg(board, last, light=True))
-    turn = 'White ⚪' if board.turn else 'Black ⚫'
+    white = board.turn
     names = {chess.PAWN: 'Pawn', chess.KNIGHT: 'Knight', chess.BISHOP: 'Bishop', chess.ROOK: 'Rook', chess.QUEEN: 'Queen', chess.KING: 'King'}
+    icons = {'Pawn': '♙♟', 'Knight': '♘♞', 'Bishop': '♗♝', 'Rook': '♖♜', 'Queen': '♕♛', 'King': '♔♚'}
+    colours = {'Pawn': '30363d', 'Knight': '7c3aed', 'Bishop': '1f6feb', 'Rook': 'bf8700', 'Queen': 'd6336c', 'King': '00a86b'}
     groups = {}
     for mv in board.legal_moves:
         groups.setdefault(names[board.piece_at(mv.from_square).piece_type], []).append((board.san(mv), mv.uci()))
+
+    def badge(text, colour, label=None, style='for-the-badge'):
+        enc = lambda s: urllib.parse.quote(s.replace('-', '--').replace('_', '__'))
+        part = f'{enc(label)}-{enc(text)}' if label else enc(text)
+        return f'https://img.shields.io/badge/{part}-{colour}?style={style}&labelColor=0d1117'
+
     rows = []
     for nm in ['Pawn', 'Knight', 'Bishop', 'Rook', 'Queen', 'King']:
         if nm in groups:
-            ms = ' '.join(f'[{san}]({link("chess: move " + uci)})' for san, uci in sorted(groups[nm]))
-            rows.append(f'| **{nm}** | {ms} |')
-    recent = ' · '.join(f'`{m["san"]}` by @{m["user"]}' for m in st['moves'][-5:][::-1]) or 'no moves yet: be the first!'
+            icon = icons[nm][0 if white else 1]
+            btns = ' '.join(f'<a href="{link("chess: move " + uci)}"><img src="{badge(f"{icon} {san}", colours[nm], style="flat-square")}" alt="{san}" height="24"/></a>'
+                            for san, uci in sorted(groups[nm]))
+            rows.append(f'<p align="center"><b>{nm}</b><br/>{btns}</p>')
+    medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣']
     top = sorted(st['players'].items(), key=lambda x: -x[1])[:5]
+    leaders = ' &nbsp; '.join(f'{medals[i]} <img src="https://github.com/{u}.png?size=40" width="20" height="20" alt=""/> <b>@{u}</b> ({n})'
+                              for i, (u, n) in enumerate(top)) or 'nobody yet: be the first!'
+    recent = ' &nbsp;·&nbsp; '.join(f'<img src="https://github.com/{m["user"]}.png?size=40" width="18" height="18" alt=""/> <code>{m["san"]}</code> by @{m["user"]}'
+                                    for m in st['moves'][-4:][::-1]) or 'no moves yet'
+    status = badge(f'{"⚪ White" if white else "⚫ Black"} to move · Move {board.fullmove_number}', '00ff9c' if white else '7c3aed')
+    if board.is_check():
+        status = badge(f'{"⚪ White" if white else "⚫ Black"} is in CHECK · Move {board.fullmove_number}', 'e5484d')
     v = f'{st["games"]}-{len(st["moves"])}'   # new URL after every move, so browsers don't show a cached board
     board_img = (f'<picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg?v={v}"/>'
                  f'<img src="art/chess.svg?v={v}" width="420" alt="Community chess board"/></picture>')
-    return (f'<p align="center">{board_img}</p>\n\n'
-            f'<p align="center">It\'s <b>{turn}</b>\'s turn, move {board.fullmove_number}. Anyone can play either side: click a move below.</p>\n\n'
-            '| Piece | Your move |\n|---|---|\n' + '\n'.join(rows) + '\n\n'
-            f'**Last moves:** {recent}  \n'
-            f'**Top players:** {" · ".join(f"@{u} ({n})" for u, n in top) or "nobody yet"}  \n'
-            f'Games finished: {st["games"]}')
+    stats = (f'<img src="{badge(str(len(st["moves"])), "30363d", "moves this game")}" height="22"/> '
+             f'<img src="{badge(str(len(st["players"])), "30363d", "players")}" height="22"/> '
+             f'<img src="{badge(str(st["games"]), "30363d", "games finished")}" height="22"/>')
+    return (f'<p align="center">{board_img}</p>\n'
+            f'<p align="center"><img src="{status}" height="30"/></p>\n'
+            '<p align="center"><b>How to play:</b> ① click a move below &nbsp;→&nbsp; ② press <b>Submit new issue</b> &nbsp;→&nbsp; '
+            '③ ⏳ <b>wait 1–2 minutes</b> and refresh: the board updates by itself.<br/>'
+            '<sub>Anyone can play either colour. One move per issue. If the board looks old, press Ctrl + Shift + R.</sub></p>\n'
+            + '\n'.join(rows) + '\n'
+            f'<p align="center"><b>Last moves</b><br/>{recent}</p>\n'
+            f'<p align="center"><b>🏆 Top players</b><br/>{leaders}</p>\n'
+            f'<p align="center">{stats}</p>')
 
 
 def chess_move(st, user, uci):
