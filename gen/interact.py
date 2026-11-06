@@ -257,8 +257,6 @@ def render_all():
     text = section(text, 'CHESS', chess_render(chess_state()))
     text = section(text, 'POLL', poll_render(poll_state()))
     text = section(text, 'GUESTBOOK', guestbook_render(load('guestbook.json', [])))
-    rs = riddle_state(); riddle_roll(rs); save('riddle.json', rs)
-    text = section(text, 'RIDDLE', riddle_render(rs))
     README.write_text(text)
 
 
@@ -276,7 +274,7 @@ def reply(number, body):
 def handle():
     title = (os.environ.get('ISSUE_TITLE') or '').strip(); user = re.sub(r'[^A-Za-z0-9-]', '', os.environ.get('ISSUE_USER') or '')[:39]
     body = os.environ.get('ISSUE_BODY') or ''; number = os.environ.get('ISSUE_NUMBER')
-    m = re.match(r'^(chess|poll|guestbook|riddle)\s*:\s*(.*)$', title, re.I)
+    m = re.match(r'^(chess)\s*:\s*(.*)$', title, re.I)   # poll, guestbook and riddle were removed on 2026-11-06
     if not m or not user:
         return  # not a game issue: leave it alone
     game, rest = m.group(1).lower(), m.group(2).strip()

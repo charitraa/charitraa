@@ -151,7 +151,7 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
 
 ---
 
-### `> play --with-visitors`
+### `> play chess --with-visitors`
 
 <!-- Visitor games: each link opens an issue; .github/workflows/interact.yml makes the move and updates this README.
      Remove any game by deleting its block from GAME:name to /GAME:name. -->
@@ -174,42 +174,6 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
 Games finished: 0
 <!-- CHESS:END -->
 <!-- /GAME:chess -->
-
-<!-- GAME:riddle -->
-#### 🎯 Daily riddle
-<!-- RIDDLE:START -->
-> 🎯 **Today's riddle (2026-11-06):** Forward I am heavy, backward I am not. What am I?
-
-**[💡 Answer it](https://github.com/charitraa/charitraa/issues/new?title=riddle%3A%20answer%20&body=Type%20your%20answer%20at%20the%20end%20of%20the%20issue%20title%2C%20after%20riddle%3A%20answer)** (type your answer after `riddle: answer` in the title) · solved today by 0
-
-🏆 **Hall of fame:** nobody yet
-<!-- RIDDLE:END -->
-<!-- /GAME:riddle -->
-
-<!-- GAME:poll -->
-#### 🗳️ Live poll
-<!-- POLL:START -->
-**What should I build next?** (0 votes)
-
-| Option | Votes | |
-|---|---|---|
-| 1. NepLang 2.0: more Nepali keywords | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%201&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
-| 2. More Linux fix videos on Nooe Hack | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%202&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
-| 3. An open-source EducationERP demo | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%203&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
-| 4. A VS Code theme in my neon colours | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%204&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
-
-One vote per GitHub account; voting again moves your vote.
-<!-- POLL:END -->
-<!-- /GAME:poll -->
-
-<!-- GAME:guestbook -->
-#### 📝 Guestbook
-<!-- GUESTBOOK:START -->
-_No signatures yet. Be the first!_
-
-**[✍️ Sign the guestbook](https://github.com/charitraa/charitraa/issues/new?title=guestbook%3A%20sign&body=Write%20your%20message%20on%20the%20first%20line%20%28max%2080%20characters%29.%20Links%20and%20formatting%20are%20removed.)** · 0 signatures so far
-<!-- GUESTBOOK:END -->
-<!-- /GAME:guestbook -->
 
 ---
 
