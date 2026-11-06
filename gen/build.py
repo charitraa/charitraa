@@ -33,7 +33,7 @@ def api(url, data=None):
 def fetch():
     now = dt.datetime.now(dt.timezone.utc)
     q = '''query($l:String!,$f:DateTime!,$t:DateTime!,$m:DateTime!){user(login:$l){name createdAt followers{totalCount}
-    repositories(ownerAffiliations:OWNER,privacy:PUBLIC,first:100,orderBy:{field:PUSHED_AT,direction:DESC}){totalCount nodes{name description
+    repositories(ownerAffiliations:OWNER,privacy:PUBLIC,first:100,orderBy:{field:PUSHED_AT,direction:DESC}){totalCount nodes{name description createdAt
     stargazerCount pushedAt primaryLanguage{name color} languages(first:5,orderBy:{field:SIZE,direction:DESC}){edges{size node{name color}}}}}
     contributionsCollection(from:$f,to:$t){contributionCalendar{totalContributions weeks{contributionDays{date contributionCount}}}}
     month:contributionsCollection(from:$m,to:$t){commitContributionsByRepository(maxRepositories:12){repository{name} contributions{totalCount}}}}}'''
@@ -46,19 +46,20 @@ def fetch():
         for e in r['languages']['edges']:
             n = e['node']; langs.setdefault(n['name'], [0, n['color'] or '#8b949e'])[0] += e['size']
     top = sorted(langs.items(), key=lambda x: -x[1][0])[:6]
-    msgs = []
-    for r in repos[:4]:
+    msgs, commits = [], []
+    for i, r in enumerate(repos[:15]):
         try:
-            for c in api(f'https://api.github.com/repos/{LOGIN}/{r["name"]}/commits?per_page=15'):
+            for c in api(f'https://api.github.com/repos/{LOGIN}/{r["name"]}/commits?author={LOGIN}&per_page=100'):
                 m = c['commit']['message'].split('\n')[0].strip()
-                if m and not m.lower().startswith('merge'):
+                commits.append((c['commit']['author']['date'], m))
+                if i < 4 and len(msgs) < 60 and m and not m.lower().startswith('merge'):
                     msgs.append(m[:38])
         except Exception:
             pass
     month = [(x['repository']['name'], x['contributions']['totalCount']) for x in u['month']['commitContributionsByRepository']]
     return dict(name=u['name'] or LOGIN, created=u['createdAt'][:4], followers=u['followers']['totalCount'], repo_count=u['repositories']['totalCount'],
                 repos=repos, days=days, total=u['contributionsCollection']['contributionCalendar']['totalContributions'],
-                langs=[(n, c) for n, (s, c) in top], month=month, msgs=msgs or ['initial commit'])
+                langs=[(n, c) for n, (s, c) in top], month=month, msgs=msgs or ['initial commit'], commits=commits)
 
 
 def stats(D):
@@ -381,22 +382,78 @@ def terminal(D, S):
     return svg(370, body, 'Animated terminal', '@keyframes show{to{opacity:1}}@keyframes blink{0%{opacity:1}100%{opacity:0}}')
 
 
-# ----------------------------------------------------------------- 14 galaxy
+# ----------------------------------------------------------------- 14 galaxy (realistic spiral)
 def galaxy(D, S):
+    """A tilted two-armed spiral galaxy: golden core, blue-white arms with dust lanes, pink star-forming
+    regions and nebula haze. Each day you contributed is one bright twinkling star placed along the arms."""
+    H = 420; cx, cy = 420, 215
+    rnd = random.Random(2026)
     act = [(d, c) for d, c in D['days'] if c]
-    body = '<defs><radialGradient id="gc"><stop offset="0" stop-color="#b69cf7" stop-opacity=".6"/><stop offset="1" stop-color="#0d1117" stop-opacity="0"/></radialGradient></defs><circle cx="420" cy="180" r="120" fill="url(#gc)"/>'
-    g = ''
-    random.seed(11)
+    defs = ('<defs>'
+            '<filter id="gb6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>'
+            '<filter id="gb2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>'
+            '<filter id="gb16" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>'
+            '<radialGradient id="core"><stop offset="0" stop-color="#fffaf0"/><stop offset=".18" stop-color="#ffe6b0"/>'
+            '<stop offset=".45" stop-color="#e9a95b" stop-opacity=".55"/><stop offset="1" stop-color="#7a4a2a" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="disk"><stop offset="0" stop-color="#b9c8ff" stop-opacity=".22"/><stop offset=".6" stop-color="#6d7fd6" stop-opacity=".08"/>'
+            '<stop offset="1" stop-color="#0b0d1a" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="neb1"><stop offset="0" stop-color="#7c3aed" stop-opacity=".35"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="neb2"><stop offset="0" stop-color="#1d6fd8" stop-opacity=".28"/><stop offset="1" stop-color="#1d6fd8" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="neb3"><stop offset="0" stop-color="#d6337a" stop-opacity=".2"/><stop offset="1" stop-color="#d6337a" stop-opacity="0"/></radialGradient>'
+            '</defs>')
+    out = f'<rect width="{W}" height="{H}" rx="14" fill="#05060d"/>'
+    out += ('<ellipse cx="140" cy="110" rx="220" ry="120" fill="url(#neb1)"/><ellipse cx="720" cy="320" rx="240" ry="130" fill="url(#neb2)"/>'
+            '<ellipse cx="640" cy="80" rx="160" ry="90" fill="url(#neb3)"/>')
+    for k in range(170):  # distant field stars
+        x, y = rnd.uniform(0, W), rnd.uniform(0, H); r = rnd.choice([.4, .5, .6, .8, 1.1])
+        tw = f' style="animation:tw {rnd.uniform(2, 5):.1f}s {rnd.uniform(0, 4):.1f}s infinite alternate"' if k % 9 == 0 else ''
+        out += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="#dfe6ff" opacity="{rnd.uniform(.25, .8):.2f}"{tw}/>'
+
+    a, b, turns = 23.0, 0.255, 3.35 * math.pi       # logarithmic spiral r = a*e^(b*t)
+    rmax = a * math.exp(b * turns)
+    def arm_point(t, arm, spread):
+        r = a * math.exp(b * t); ang = t + arm * math.pi
+        dr = rnd.gauss(0, spread * (0.10 * r + 3)); da = rnd.gauss(0, spread * 0.10)
+        return (r + dr) * math.cos(ang + da), (r + dr) * math.sin(ang + da), r
+    disk = f'<circle r="{rmax * 1.08:.0f}" fill="url(#disk)"/>'
+    lanes = ''
+    for arm in (0, 1):  # dark dust lanes just inside each arm
+        pts = []
+        for s_ in range(90):
+            t = 0.9 + s_ / 89 * (turns - 0.9); r = a * math.exp(b * t) * 0.93; ang = t + arm * math.pi - 0.12
+            pts.append(f'{r * math.cos(ang):.1f} {r * math.sin(ang):.1f}')
+        lanes += f'<path d="M{" L".join(pts)}" fill="none" stroke="#120c08" stroke-opacity=".32" stroke-width="7" stroke-linecap="round" filter="url(#gb2)"/>'
+    glow, dots, hii = '', '', ''
+    for arm in (0, 1):
+        for s_ in range(26):  # soft arm glow
+            t = 0.6 + s_ / 25 * (turns - 0.6); x, y, r = arm_point(t, arm, 0)
+            glow += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{12 + r * 0.2:.0f}" fill="#9fb4ff" opacity=".13" filter="url(#gb6)"/>'
+        for s_ in range(760):  # the arm stars
+            t = rnd.uniform(0.35, turns) ** 1.0; x, y, r = arm_point(t, arm, 1.7)
+            f = r / rmax
+            col = '#ffe2b0' if f < .22 else ('#f4f1ff' if f < .5 else rnd.choice(['#cfe0ff', '#a9c3ff', '#e8eeff']))
+            dots += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{rnd.uniform(.5, 1.5):.1f}" fill="{col}" opacity="{rnd.uniform(.3, .95):.2f}"/>'
+        for s_ in range(12):  # pink star-forming regions
+            t = rnd.uniform(1.6, turns); x, y, r = arm_point(t, arm, .6)
+            hii += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{rnd.uniform(2, 4.5):.1f}" fill="#ff6fa8" opacity=".75" filter="url(#gb2)"/>'
+    bulge = ''.join(f'<circle cx="{rnd.gauss(0, 30):.1f}" cy="{rnd.gauss(0, 30):.1f}" r="{rnd.uniform(.5, 1.3):.1f}" fill="#ffe9c0" opacity=".8"/>' for _ in range(140))
+    core = '<circle r="120" fill="url(#core)" filter="url(#gb6)"/><circle r="30" fill="#fffaf0" opacity=".9" filter="url(#gb6)"/><circle r="7" fill="#ffffff"/>'
+    # your contribution days: bright stars spread along the arms, oldest near the core
+    commits = ''
+    n = max(1, len(act))
     for i, (d, c) in enumerate(act):
-        arm = i % 3; base = (i // 3) / max(1, len(act) / 3)
-        r = 14 + base * 150 + random.uniform(-10, 10); ang = base * 4.2 + arm * 2.094 + random.uniform(-.25, .25)
-        x = 420 + r * math.cos(ang); y = 180 + r * 0.55 * math.sin(ang)
-        size = 1 + min(4, c * .7)
-        col = ['#ffffff', '#b69cf7', '#4cb8ff', NEON][min(3, c // 3)]
-        g += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size:.1f}" fill="{col}" style="animation:tw {1.5 + (i % 5) * .4:.1f}s {i % 7 * .3:.1f}s infinite alternate"/>'
-    body += f'<g style="transform-origin:420px 180px;animation:spin 120s linear infinite">{g}</g>'
-    body += header('🌌 Galaxy of commits', f'{len(act)} active days = {len(act)} stars')
-    return svg(360, body, 'Galaxy of commits', '@keyframes spin{to{transform:rotate(360deg)}}@keyframes tw{from{opacity:.35}to{opacity:1}}')
+        arm = i % 2; t = 0.9 + (i // 2) / max(1, n / 2) * (turns - 1.1); x, y, r = arm_point(t, arm, .55)
+        size = 1.3 + min(2.6, c * .45)
+        col = ['#ffffff', '#bfe3ff', '#7ef7ff', '#b69cf7'][min(3, c // 3)]
+        commits += (f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size * 2.6:.1f}" fill="{col}" opacity=".18" filter="url(#gb2)"/>'
+                    f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size:.1f}" fill="{col}" style="animation:tw {rnd.uniform(1.4, 3.2):.1f}s {rnd.uniform(0, 3):.1f}s infinite alternate"/>')
+    spin = f'<g style="transform-origin:0 0;animation:spin 240s linear infinite">{disk}{glow}{lanes}{dots}{hii}{bulge}{commits}</g>'
+    out += f'<g transform="translate({cx} {cy}) rotate(-18) scale(1 .46)">{spin}{core}</g>'
+    out += f'<ellipse cx="{cx}" cy="{cy}" rx="300" ry="130" fill="url(#neb2)" opacity=".25" filter="url(#gb16)"/>'
+    out += header('🌌 Galaxy of commits', f'{len(act)} active days = {len(act)} bright stars')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Galaxy of commits">'
+            f'<style>text{{font-family:{SANS}}} .m{{font-family:{MONO}}} @keyframes spin{{to{{transform:rotate(360deg)}}}}@keyframes tw{{from{{opacity:.35}}to{{opacity:1}}}}</style>'
+            f'{defs}{out}</svg>')
 
 
 # ----------------------------------------------------------------- 15 equalizer
@@ -460,13 +517,148 @@ def sky(D, S):
     return svg(260, body, 'Kathmandu sky', '@keyframes tw{from{opacity:.2}to{opacity:1}}@keyframes drift{from{transform:translateX(-200px)}to{transform:translateX(900px)}}')
 
 
-ALL = [('terminal', terminal), ('galaxy', galaxy)]   # the others were removed from the README on 2026-11-06
+
+# ----------------------------------------------------------------- coding clock
+def clock(D, S):
+    hours = [0] * 24
+    for when, _ in D['commits']:
+        t = dt.datetime.fromisoformat(when.replace('Z', '+00:00')).astimezone(NPT); hours[t.hour] += 1
+    mx = max(1, max(hours)); cx, cy, r0, r1 = 300, 210, 62, 168
+    body = f'<circle cx="{cx}" cy="{cy}" r="{r1 + 8}" fill="none" stroke="#30363d"/><circle cx="{cx}" cy="{cy}" r="{r0 - 4}" fill="#161b22" stroke="#30363d"/>'
+    for h in range(24):
+        a = (h / 24) * 2 * math.pi - math.pi / 2; L = r0 + (r1 - r0) * hours[h] / mx
+        x0, y0, x1, y1 = cx + r0 * math.cos(a), cy + r0 * math.sin(a), cx + L * math.cos(a), cy + L * math.sin(a)
+        night = h >= 21 or h < 6
+        col = '#b69cf7' if night else ('#ffd34a' if 6 <= h < 17 else '#ff8c42')
+        body += (f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="{col}" stroke-width="11" stroke-linecap="round" '
+                 f'style="animation:pulse 3s ease-in-out {h * .12:.2f}s infinite alternate"/>')
+        if h % 3 == 0:
+            lx, ly = cx + (r1 + 22) * math.cos(a), cy + (r1 + 22) * math.sin(a)
+            body += label(f'{lx:.0f}', f'{ly + 4:.0f}', f'{h:02d}', 11, DIM, 'middle', 'm')
+    peak = max(range(24), key=lambda h: hours[h]); total = sum(hours)
+    night_share = sum(hours[h] for h in list(range(21, 24)) + list(range(0, 6))) / max(1, total)
+    day_share = sum(hours[6:17]) / max(1, total)
+    kind = ('🦉 Night owl' if night_share > .35 else '🌅 Early bird' if sum(hours[5:9]) / max(1, total) > .3 else '☀️ Daytime coder' if day_share > .5 else '🌆 Evening coder')
+    body += label(cx, cy - 4, f'{peak:02d}:00', 20, INK, 'middle', 'm', 700) + label(cx, cy + 16, 'peak hour', 11, DIM, 'middle')
+    body += label(520, 140, kind, 26, INK, weight=800)
+    body += label(520, 176, f'most active around {peak:02d}:00 Nepal time', 14, DIM)
+    body += label(520, 210, f'{total} commits analysed', 14, DIM, cls='m')
+    for i, (lab, share, col) in enumerate([('night 21-06', night_share, '#b69cf7'), ('day 06-17', day_share, '#ffd34a'), ('evening 17-21', 1 - night_share - day_share, '#ff8c42')]):
+        y = 250 + i * 30
+        body += label(520, y + 10, lab, 12, DIM, cls='m') + f'<rect x="630" y="{y}" width="170" height="12" rx="6" fill="#30363d"/><rect x="630" y="{y}" width="{max(4, 170 * share):.0f}" height="12" rx="6" fill="{col}"/>'
+    body += header('⏰ Coding clock', 'when do I commit?')
+    return svg(420, body, 'Coding clock', '@keyframes pulse{from{opacity:.75}to{opacity:1}}')
+
+
+# ----------------------------------------------------------------- language journey
+def journey(D, S):
+    first = {}
+    for r in D['repos']:
+        L = r['primaryLanguage']
+        if L and (L['name'] not in first or r['createdAt'] < first[L['name']][0]):
+            first[L['name']] = (r['createdAt'], L['color'] or '#8b949e', r['name'])
+    ev = sorted(first.items(), key=lambda x: x[1][0])[:12]
+    if not ev:
+        return svg(200, header('🗺️ Language journey', 'no data yet'), 'Language journey')
+    t0 = dt.datetime.fromisoformat(ev[0][1][0].replace('Z', '+00:00')); t1 = dt.datetime.now(dt.timezone.utc); span = max(1, (t1 - t0).days)
+    body = '<line x1="50" y1="200" x2="790" y2="200" stroke="#30363d" stroke-width="4" stroke-linecap="round"/>'
+    for yv in range(t0.year + 1, t1.year + 1):
+        x = 50 + 740 * max(0, (dt.datetime(yv, 1, 1, tzinfo=dt.timezone.utc) - t0).days) / span
+        body += f'<line x1="{x:.0f}" y1="192" x2="{x:.0f}" y2="208" stroke="#30363d" stroke-width="2"/>' + label(f'{x:.0f}', 228, yv, 12, DIM, 'middle', 'm')
+    for i, (name, (when, col, repo)) in enumerate(ev):
+        x = 50 + 740 * (dt.datetime.fromisoformat(when.replace('Z', '+00:00')) - t0).days / span
+        up = i % 2 == 0; tier = (i // 2) % 3; y = 150 - tier * 44 if up else 254 + tier * 44
+        bx = min(max(x, 66), 774)
+        body += (f'<g style="opacity:0;animation:show .4s {i * .25:.2f}s forwards"><line x1="{x:.0f}" y1="200" x2="{x:.0f}" y2="{y + (14 if up else -14)}" stroke="{col}" stroke-width="2"/>'
+                 f'<circle cx="{x:.0f}" cy="200" r="8" fill="{col}" stroke="#0d1117" stroke-width="3"/>'
+                 f'<rect x="{bx - 58:.0f}" y="{y - 14}" width="116" height="28" rx="14" fill="#161b22" stroke="{col}"/>'
+                 + label(f'{bx:.0f}', y + 5, name[:14], 13, INK, 'middle', weight=700) + label(f'{bx + 64:.0f}' if bx < 700 else f'{bx - 64:.0f}', y + 4, when[:7], 10, DIM, 'start' if bx < 700 else 'end', 'm') + '</g>')
+    body += header('🗺️ Language journey', 'when each language first appeared')
+    return svg(400, body, 'Language journey', '@keyframes show{to{opacity:1}}')
+
+
+# ----------------------------------------------------------------- commit mood
+STOP = set('the a an to of and in for on with from by is be it this that at as into via update updated add added fix fixed readme md use using new feat chore docs home meow desktop source'.split())
+def mood(D, S):
+    msgs = [m for _, m in D['commits'] if m]
+    verbs = {'feat': 0, 'fix': 0, 'chore': 0, 'docs': 0, 'refactor': 0, 'update': 0, 'other': 0}
+    words = {}
+    for m in msgs:
+        w0 = m.split()[0].lower().rstrip(':') if m.split() else ''
+        w0 = {'add': 'feat', 'added': 'feat', 'adds': 'feat', 'fixed': 'fix', 'fixes': 'fix', 'updated': 'update'}.get(w0.split('(')[0], w0)
+        k = next((v for v in verbs if w0.startswith(v)), 'other'); verbs[k] += 1
+        for w in ''.join(ch.lower() if ch.isalnum() else ' ' for ch in m).split():
+            if len(w) > 2 and w not in STOP and not w.isdigit():
+                words[w] = words.get(w, 0) + 1
+    top = sorted(words.items(), key=lambda x: -x[1])[:8]; mx = max([c for _, c in top] or [1])
+    body = label(40, 84, 'MOST-USED WORDS', 12, DIM, cls='m', weight=700)
+    for i, (w, c) in enumerate(top):
+        y = 100 + i * 30
+        body += (label(40, y + 15, w[:14], 14, INK, cls='m') + f'<rect x="160" y="{y + 2}" width="230" height="16" rx="8" fill="#30363d"/>'
+                 f'<rect x="160" y="{y + 2}" width="{max(8, 230 * c / mx):.0f}" height="16" rx="8" fill="url(#mg)" style="transform-origin:160px 0;animation:grow .8s {i * .08:.2f}s both"/>' + label(400, y + 15, c, 12, DIM, cls='m'))
+    tot = max(1, sum(verbs.values())); cols = {'feat': '#30a46c', 'fix': '#e5484d', 'chore': '#ffd34a', 'docs': '#4cb8ff', 'refactor': '#b69cf7', 'update': '#ff8c42', 'other': '#6e7681'}
+    cx, cy, R = 600, 200, 92; a0 = -math.pi / 2; body += label(470, 84, 'HOW I START COMMITS', 12, DIM, cls='m', weight=700)
+    for k, v in verbs.items():
+        if not v: continue
+        a1 = a0 + 2 * math.pi * v / tot; large = 1 if a1 - a0 > math.pi else 0
+        body += (f'<path d="M{cx} {cy} L{cx + R * math.cos(a0):.1f} {cy + R * math.sin(a0):.1f} A{R} {R} 0 {large} 1 {cx + R * math.cos(a1):.1f} {cy + R * math.sin(a1):.1f}Z" fill="{cols[k]}" stroke="#0d1117" stroke-width="2"/>')
+        a0 = a1
+    body += f'<circle cx="{cx}" cy="{cy}" r="50" fill="#0d1117"/>' + label(cx, cy + 6, f'{len(msgs)}', 18, INK, 'middle', 'm', 700)
+    for i, k in enumerate([k for k in verbs if verbs[k]]):
+        y = 110 + i * 26
+        body += f'<rect x="720" y="{y - 10}" width="12" height="12" rx="3" fill="{cols[k]}"/>' + label(740, y, f'{k} {100 * verbs[k] // tot}%', 12, INK, cls='m')
+    fav = max(verbs, key=lambda k: verbs[k] if k != 'other' else -1)
+    body += label(40, 372, f'favourite commit type: {fav}  ·  {sum(1 for m in msgs if ":" in m.split(" ")[0])} conventional commits', 12, DIM, cls='m')
+    body = '<defs><linearGradient id="mg" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#00ff9c"/></linearGradient></defs>' + body
+    body += header('📈 Commit mood', 'what my commit messages say')
+    return svg(400, body, 'Commit mood', '@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}')
+
+
+# ----------------------------------------------------------------- isometric contribution city
+def city(D, S):
+    days = D['days'][-364:]; mx = max(1, max(c for _, c in days))
+    tw, th = 24.0, 12.0; ox, oy = 420 - (53 - 7) * 12 / 2 + 0, 120
+    cells = []
+    for k, (d, c) in enumerate(days):
+        i, j = k // 7, k % 7
+        cells.append((i + j, i, j, c, d))
+    cells.sort()
+    pal = [('#21262d', '#1a1f26', '#14181e'), ('#0e4429', '#0b3521', '#08281a'), ('#006d32', '#005526', '#003f1c'), ('#26a641', '#1e8434', '#176427'), ('#39d353', '#2fae45', '#258a37')]
+    body = ''
+    for n, (_, i, j, c, d) in enumerate(cells):
+        x = ox + (i - j) * tw * 0.5
+        y = oy + (i + j) * th * 0.5
+        lvl = 0 if c == 0 else min(4, 1 + int(3.99 * c / mx)); top, left, right = pal[lvl]
+        h = 3 if c == 0 else 8 + 110 * c / mx
+        T = f'{x:.1f},{y - h:.1f} {x + tw / 2:.1f},{y - h + th / 2:.1f} {x:.1f},{y - h + th:.1f} {x - tw / 2:.1f},{y - h + th / 2:.1f}'
+        L = f'{x - tw / 2:.1f},{y - h + th / 2:.1f} {x:.1f},{y - h + th:.1f} {x:.1f},{y + th:.1f} {x - tw / 2:.1f},{y + th / 2:.1f}'
+        Rr = f'{x + tw / 2:.1f},{y - h + th / 2:.1f} {x:.1f},{y - h + th:.1f} {x:.1f},{y + th:.1f} {x + tw / 2:.1f},{y + th / 2:.1f}'
+        anim = f' style="transform-origin:{x:.1f}px {y + th:.1f}px;animation:rise .9s cubic-bezier(.2,.9,.3,1.2) {(i * .03):.2f}s both"' if c else ''
+        body += f'<g{anim}><polygon points="{L}" fill="{left}"/><polygon points="{Rr}" fill="{right}"/><polygon points="{T}" fill="{top}"/></g>'
+    best = max(days, key=lambda x: x[1])
+    body += header('🧩 Contribution city', f'{sum(c for _, c in days)} contributions · tallest tower {best[1]} on {best[0]}')
+    return svg(560, body, 'Contribution city', '@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}')
+
+
+# ----------------------------------------------------------------- light-mode versions
+LIGHT = [('#21262d', '#eaeef2'), ('#1a1f26', '#d8dee4'), ('#14181e', '#c6ced6'), ('#0d1117', '#ffffff'), ('#161b22', '#f6f8fa'), ('#30363d', '#d0d7de'), ('#e6edf3', '#1f2328'), ('#7d8590', '#59636e'),
+         ('#00ff9c', '#1a7f37'), ('#11161d', '#e7ebf0'), ('#ffd34a', '#bf8700'), ('#b69cf7', '#8250df')]
+def lighten(text):
+    for a, b in LIGHT:
+        text = text.replace(a, b).replace(a.upper(), b)
+    return text
+
+
+ALL = [('terminal', terminal), ('galaxy', galaxy), ('clock', clock), ('journey', journey), ('mood', mood), ('city', city)]
+HAS_LIGHT = {'terminal', 'clock', 'journey', 'mood', 'city'}   # galaxy stays dark: it is space
 
 if __name__ == '__main__':
     D = fetch(); S = stats(D); OUT.mkdir(exist_ok=True)
     for name, fn in ALL:
         try:
-            (OUT / f'{name}.svg').write_text(fn(D, S))
+            text = fn(D, S); (OUT / f'{name}.svg').write_text(text)
+            if name in HAS_LIGHT:
+                (OUT / f'{name}-light.svg').write_text(lighten(text))
             print('ok', name)
         except Exception as e:  # one broken piece must not stop the others
             print('FAILED', name, e)

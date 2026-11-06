@@ -142,12 +142,93 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
      To remove one, delete its block from ART:name to /ART:name (and its function in gen/build.py if you like). -->
 
 <!-- ART:terminal -->
-<p align="center"><img src="art/terminal.svg" width="100%" alt="💻 Animated terminal" /></p>
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/terminal-light.svg"/><img src="art/terminal.svg" width="100%" alt="Animated terminal"/></picture></p>
 <!-- /ART:terminal -->
 
 <!-- ART:galaxy -->
 <p align="center"><img src="art/galaxy.svg" width="100%" alt="🌌 Galaxy of commits" /></p>
 <!-- /ART:galaxy -->
+
+---
+
+### `> play --with-visitors`
+
+<!-- Visitor games: each link opens an issue; .github/workflows/interact.yml makes the move and updates this README.
+     Remove any game by deleting its block from GAME:name to /GAME:name. -->
+
+<!-- GAME:chess -->
+#### ♟️ Community chess
+<!-- CHESS:START -->
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg"/><img src="art/chess.svg" width="420" alt="Community chess board"/></picture></p>
+
+<p align="center">It's <b>White ⚪</b>'s turn, move 1. Anyone can play either side: click a move below.</p>
+
+| Piece | Your move |
+|---|---|
+| **Pawn** | [a3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20a2a3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [a4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20a2a4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [b3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20b2b3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [b4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20b2b4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [c3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20c2c3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [c4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20c2c4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [d3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20d2d3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [d4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20d2d4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [e3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20e2e3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [e4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20e2e4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [f3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20f2f3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [f4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20f2f4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [g3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20g2g3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [g4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20g2g4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [h3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20h2h3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [h4](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20h2h4&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+| **Knight** | [Na3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20b1a3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [Nc3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20b1c3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [Nf3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20g1f3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) [Nh3](https://github.com/charitraa/charitraa/issues/new?title=chess%3A%20move%20g1h3&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+
+**Last moves:** no moves yet: be the first!  
+**Top players:** nobody yet  
+Games finished: 0
+<!-- CHESS:END -->
+<!-- /GAME:chess -->
+
+<!-- GAME:riddle -->
+#### 🎯 Daily riddle
+<!-- RIDDLE:START -->
+> 🎯 **Today's riddle (2026-11-06):** Forward I am heavy, backward I am not. What am I?
+
+**[💡 Answer it](https://github.com/charitraa/charitraa/issues/new?title=riddle%3A%20answer%20&body=Type%20your%20answer%20at%20the%20end%20of%20the%20issue%20title%2C%20after%20riddle%3A%20answer)** (type your answer after `riddle: answer` in the title) · solved today by 0
+
+🏆 **Hall of fame:** nobody yet
+<!-- RIDDLE:END -->
+<!-- /GAME:riddle -->
+
+<!-- GAME:poll -->
+#### 🗳️ Live poll
+<!-- POLL:START -->
+**What should I build next?** (0 votes)
+
+| Option | Votes | |
+|---|---|---|
+| 1. NepLang 2.0: more Nepali keywords | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%201&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+| 2. More Linux fix videos on Nooe Hack | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%202&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+| 3. An open-source EducationERP demo | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%203&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+| 4. A VS Code theme in my neon colours | `▱▱▱▱▱▱▱▱▱▱` 0% (0) | [vote](https://github.com/charitraa/charitraa/issues/new?title=poll%3A%20vote%204&body=Just%20press%20%22Submit%20new%20issue%22.%20The%20README%20updates%20in%20about%20a%20minute.) |
+
+One vote per GitHub account; voting again moves your vote.
+<!-- POLL:END -->
+<!-- /GAME:poll -->
+
+<!-- GAME:guestbook -->
+#### 📝 Guestbook
+<!-- GUESTBOOK:START -->
+_No signatures yet. Be the first!_
+
+**[✍️ Sign the guestbook](https://github.com/charitraa/charitraa/issues/new?title=guestbook%3A%20sign&body=Write%20your%20message%20on%20the%20first%20line%20%28max%2080%20characters%29.%20Links%20and%20formatting%20are%20removed.)** · 0 signatures so far
+<!-- GUESTBOOK:END -->
+<!-- /GAME:guestbook -->
+
+---
+
+### `> analyze --me`
+
+<!-- ART:clock -->
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/clock-light.svg"/><img src="art/clock.svg" width="100%" alt="Coding clock"/></picture></p>
+<!-- /ART:clock -->
+
+<!-- ART:journey -->
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/journey-light.svg"/><img src="art/journey.svg" width="100%" alt="Language journey"/></picture></p>
+<!-- /ART:journey -->
+
+<!-- ART:mood -->
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/mood-light.svg"/><img src="art/mood.svg" width="100%" alt="Commit mood"/></picture></p>
+<!-- /ART:mood -->
+
+<!-- ART:city -->
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/city-light.svg"/><img src="art/city.svg" width="100%" alt="Contribution city"/></picture></p>
+<!-- /ART:city -->
 
 ---
 
