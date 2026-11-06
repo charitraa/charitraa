@@ -552,6 +552,8 @@ def clock(D, S):
 
 # ----------------------------------------------------------------- language journey
 def journey(D, S):
+    """Animated timeline: the line draws itself, a glowing traveller moves through the years and each
+    language pops in when the traveller reaches it. Loops every 12 seconds."""
     first = {}
     for r in D['repos']:
         L = r['primaryLanguage']
@@ -560,8 +562,17 @@ def journey(D, S):
     ev = sorted(first.items(), key=lambda x: x[1][0])[:12]
     if not ev:
         return svg(200, header('🗺️ Language journey', 'no data yet'), 'Language journey')
+    P, TRAVEL = 12, 75          # loop length in seconds; the traveller reaches the end at 75%
     t0 = dt.datetime.fromisoformat(ev[0][1][0].replace('Z', '+00:00')); t1 = dt.datetime.now(dt.timezone.utc); span = max(1, (t1 - t0).days)
-    body = '<line x1="50" y1="200" x2="790" y2="200" stroke="#30363d" stroke-width="4" stroke-linecap="round"/>'
+    css = (f'.loop{{animation-duration:{P}s;animation-iteration-count:infinite;animation-timing-function:linear}}'
+           '@keyframes draw{0%{stroke-dashoffset:740}75%{stroke-dashoffset:0}92%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}'
+           '@keyframes travel{0%{transform:translateX(0);opacity:1}75%{transform:translateX(740px);opacity:1}88%{transform:translateX(740px);opacity:1}92%{opacity:0}100%{opacity:0}}'
+           '@keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.6);opacity:0}}'
+           '.ms{transform-box:fill-box;transform-origin:center}.rg{transform-box:fill-box;transform-origin:center;animation:ring 1.8s ease-out infinite}')
+    body = ('<defs><linearGradient id="jl" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="790" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#00ff9c"/></linearGradient>'
+            '<filter id="jg" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter></defs>'
+            '<line x1="50" y1="200" x2="790" y2="200" stroke="#30363d" stroke-width="4" stroke-linecap="round"/>'
+            '<line x1="50" y1="200" x2="790" y2="200" stroke="url(#jl)" stroke-width="4" stroke-linecap="round" stroke-dasharray="740" class="loop" style="animation-name:draw"/>')
     for yv in range(t0.year + 1, t1.year + 1):
         x = 50 + 740 * max(0, (dt.datetime(yv, 1, 1, tzinfo=dt.timezone.utc) - t0).days) / span
         body += f'<line x1="{x:.0f}" y1="192" x2="{x:.0f}" y2="208" stroke="#30363d" stroke-width="2"/>' + label(f'{x:.0f}', 228, yv, 12, DIM, 'middle', 'm')
@@ -569,12 +580,19 @@ def journey(D, S):
         x = 50 + 740 * (dt.datetime.fromisoformat(when.replace('Z', '+00:00')) - t0).days / span
         up = i % 2 == 0; tier = (i // 2) % 3; y = 150 - tier * 44 if up else 254 + tier * 44
         bx = min(max(x, 66), 774)
-        body += (f'<g style="opacity:0;animation:show .4s {i * .25:.2f}s forwards"><line x1="{x:.0f}" y1="200" x2="{x:.0f}" y2="{y + (14 if up else -14)}" stroke="{col}" stroke-width="2"/>'
+        pct = max(0.5, (x - 50) / 740 * TRAVEL)
+        css += (f'@keyframes j{i}{{0%,{pct:.1f}%{{opacity:0;transform:translateY({-10 if up else 10}px) scale(.8)}}'
+                f'{pct + 2.2:.1f}%{{opacity:1;transform:translateY(0) scale(1.08)}}{pct + 3.6:.1f}%{{transform:none}}92%{{opacity:1;transform:none}}100%{{opacity:0}}}}')
+        body += (f'<g class="loop ms" style="animation-name:j{i};opacity:0">'
+                 f'<line x1="{x:.0f}" y1="200" x2="{x:.0f}" y2="{y + (14 if up else -14)}" stroke="{col}" stroke-width="2"/>'
+                 f'<circle cx="{x:.0f}" cy="200" r="8" fill="none" stroke="{col}" stroke-width="2" class="rg"/>'
                  f'<circle cx="{x:.0f}" cy="200" r="8" fill="{col}" stroke="#0d1117" stroke-width="3"/>'
                  f'<rect x="{bx - 58:.0f}" y="{y - 14}" width="116" height="28" rx="14" fill="#161b22" stroke="{col}"/>'
                  + label(f'{bx:.0f}', y + 5, name[:14], 13, INK, 'middle', weight=700) + label(f'{bx + 64:.0f}' if bx < 700 else f'{bx - 64:.0f}', y + 4, when[:7], 10, DIM, 'start' if bx < 700 else 'end', 'm') + '</g>')
+    body += ('<g class="loop" style="animation-name:travel"><circle cx="50" cy="200" r="14" fill="#00ff9c" opacity=".55" filter="url(#jg)"/>'
+             '<circle cx="50" cy="200" r="6" fill="#ffffff"/></g>')
     body += header('🗺️ Language journey', 'when each language first appeared')
-    return svg(400, body, 'Language journey', '@keyframes show{to{opacity:1}}')
+    return svg(400, body, 'Language journey', css)
 
 
 # ----------------------------------------------------------------- commit mood
