@@ -130,14 +130,10 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
 
 ---
 
-### `> neofetch && ./galaxy`
+### `> ./galaxy`
 
 <!-- Profile art: every image below is redrawn from live GitHub stats every 6 hours by .github/workflows/profile-art.yml.
      To remove one, delete its block from ART:name to /ART:name (and its function in gen/build.py if you like). -->
-
-<!-- ART:terminal -->
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/terminal-light.svg"/><img src="art/terminal.svg" width="100%" alt="Animated terminal"/></picture></p>
-<!-- /ART:terminal -->
 
 <!-- ART:galaxy -->
 <p align="center"><img src="art/galaxy.svg" width="100%" alt="🌌 Galaxy of commits" /></p>
