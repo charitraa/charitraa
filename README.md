@@ -113,20 +113,6 @@ charitra@kathmandu:~$ echo $CONTACT
 
 ![WakaTime Metrics](https://raw.githubusercontent.com/charitraa/charitraa/main/metrics.plugin.wakatime.svg)
 
-<!--START_SECTION:waka-->
-
-```txt
-From: 28 October 2026 - To: 04 November 2026
-
-Total Time: 3 hrs 44 mins
-
-Python     1 hr 35 mins          ██████████▓░░░░░░░░░░░░░░   42.61 %
-JSON       1 hr 9 mins           ███████▓░░░░░░░░░░░░░░░░░   30.84 %
-Markdown   52 mins               ██████░░░░░░░░░░░░░░░░░░░   23.62 %
-Bash       6 mins                ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.93 %
-```
-
-<!--END_SECTION:waka-->
 
 ---
 
@@ -176,10 +162,6 @@ Games finished: 0
 <!-- ART:journey -->
 <p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/journey-light.svg"/><img src="art/journey.svg" width="100%" alt="Language journey"/></picture></p>
 <!-- /ART:journey -->
-
-<!-- ART:city -->
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/city-light.svg"/><img src="art/city.svg" width="100%" alt="Contribution city"/></picture></p>
-<!-- /ART:city -->
 
 ---
 

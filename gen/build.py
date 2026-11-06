@@ -649,8 +649,8 @@ def lighten(text):
     return text
 
 
-ALL = [('galaxy', galaxy), ('clock', clock), ('journey', journey), ('city', city)]
-HAS_LIGHT = {'clock', 'journey', 'city'}   # galaxy stays dark: it is space
+ALL = [('galaxy', galaxy), ('clock', clock), ('journey', journey)]
+HAS_LIGHT = {'clock', 'journey'}   # galaxy stays dark: it is space
 
 if __name__ == '__main__':
     D = fetch(); S = stats(D); OUT.mkdir(exist_ok=True)
