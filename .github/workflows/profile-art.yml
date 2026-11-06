@@ -26,7 +26,7 @@ jobs:
         run: |
           python gen/build.py
           pip install -q chess==1.11.2
-          python gen/interact.py --refresh   # rolls the daily riddle
+          python gen/interact.py --refresh   # redraws the chess board section
       - name: Commit if anything changed
         run: |
           git add art README.md data

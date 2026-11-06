@@ -15,7 +15,7 @@ concurrency:
 jobs:
   play:
     # only issues created from the README's game links
-    if: startsWith(github.event.issue.title, 'chess:') || startsWith(github.event.issue.title, 'poll:') || startsWith(github.event.issue.title, 'guestbook:') || startsWith(github.event.issue.title, 'riddle:')
+    if: startsWith(github.event.issue.title, 'chess:')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
