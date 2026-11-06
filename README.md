@@ -159,7 +159,7 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
 <!-- GAME:chess -->
 #### ♟️ Community chess
 <!-- CHESS:START -->
-<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg"/><img src="art/chess.svg" width="420" alt="Community chess board"/></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg?v=0-2"/><img src="art/chess.svg?v=0-2" width="420" alt="Community chess board"/></picture></p>
 
 <p align="center">It's <b>White ⚪</b>'s turn, move 2. Anyone can play either side: click a move below.</p>
 

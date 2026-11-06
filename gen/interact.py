@@ -112,8 +112,9 @@ def chess_render(st):
             rows.append(f'| **{nm}** | {ms} |')
     recent = ' · '.join(f'`{m["san"]}` by @{m["user"]}' for m in st['moves'][-5:][::-1]) or 'no moves yet: be the first!'
     top = sorted(st['players'].items(), key=lambda x: -x[1])[:5]
-    board_img = ('<picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg"/>'
-                 '<img src="art/chess.svg" width="420" alt="Community chess board"/></picture>')
+    v = f'{st["games"]}-{len(st["moves"])}'   # new URL after every move, so browsers don't show a cached board
+    board_img = (f'<picture><source media="(prefers-color-scheme: light)" srcset="art/chess-light.svg?v={v}"/>'
+                 f'<img src="art/chess.svg?v={v}" width="420" alt="Community chess board"/></picture>')
     return (f'<p align="center">{board_img}</p>\n\n'
             f'<p align="center">It\'s <b>{turn}</b>\'s turn, move {board.fullmove_number}. Anyone can play either side: click a move below.</p>\n\n'
             '| Piece | Your move |\n|---|---|\n' + '\n'.join(rows) + '\n\n'
