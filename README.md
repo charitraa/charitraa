@@ -122,15 +122,14 @@ charitra@kathmandu:~$ echo $CONTACT
 <!--START_SECTION:waka-->
 
 ```txt
-From: 27 October 2026 - To: 03 November 2026
+From: 28 October 2026 - To: 04 November 2026
 
-Total Time: 1 hr 15 mins
+Total Time: 3 hrs 44 mins
 
-JSON         1 hr                  ████████████████████▒░░░░   81.08 %
-Markdown     5 mins                ██░░░░░░░░░░░░░░░░░░░░░░░   07.37 %
-Python       4 mins                █▓░░░░░░░░░░░░░░░░░░░░░░░   06.45 %
-TypeScript   1 min                 ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.64 %
-Bash         1 min                 ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.46 %
+Python     1 hr 35 mins          ██████████▓░░░░░░░░░░░░░░   42.61 %
+JSON       1 hr 9 mins           ███████▓░░░░░░░░░░░░░░░░░   30.84 %
+Markdown   52 mins               ██████░░░░░░░░░░░░░░░░░░░   23.62 %
+Bash       6 mins                ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.93 %
 ```
 
 <!--END_SECTION:waka-->
