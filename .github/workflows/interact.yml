@@ -1,0 +1,41 @@
+name: Visitor games
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: visitor-games
+  cancel-in-progress: false
+
+jobs:
+  play:
+    # only issues created from the README's game links
+    if: startsWith(github.event.issue.title, 'chess:') || startsWith(github.event.issue.title, 'poll:') || startsWith(github.event.issue.title, 'guestbook:') || startsWith(github.event.issue.title, 'riddle:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q chess==1.11.2
+      - name: Make the move
+        env:   # visitor text only ever reaches Python through the environment
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python gen/interact.py
+      - name: Save
+        run: |
+          git add README.md data art
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Visitor game update [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep 4; done
