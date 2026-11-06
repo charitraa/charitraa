@@ -109,12 +109,6 @@ charitra@kathmandu:~$ echo $CONTACT
 
 ---
 
-### `> top --user charitraa`
-
-<p align="center">
-  <img src="https://ghchart.rshah.org/00c97b/charitraa" width="100%" alt="Contribution chart" />
-</p>
-
 ### `> uptime --coding`
 
 ![WakaTime Metrics](https://raw.githubusercontent.com/charitraa/charitraa/main/metrics.plugin.wakatime.svg)
