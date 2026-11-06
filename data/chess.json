@@ -1,1 +1,15 @@
-{"fen": null, "moves": [], "players": {}, "games": 0}
+{
+ "fen": "rnbqkbnr/pppppppp/8/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 1 1",
+ "moves": [
+  {
+   "uci": "b1c3",
+   "san": "Nc3",
+   "user": "charitraa",
+   "date": "2026-11-06"
+  }
+ ],
+ "players": {
+  "charitraa": 1
+ },
+ "games": 0
+}
