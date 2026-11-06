@@ -460,9 +460,7 @@ def sky(D, S):
     return svg(260, body, 'Kathmandu sky', '@keyframes tw{from{opacity:.2}to{opacity:1}}@keyframes drift{from{transform:translateX(-200px)}to{transform:translateX(900px)}}')
 
 
-ALL = [('kites', kites), ('tihar', tihar), ('everest', everest), ('traffic', traffic), ('koi', koi), ('bonsai', bonsai), ('pet', pet),
-       ('cartridge', cartridge), ('cards', cards), ('rocket', rocket), ('matrix', matrix), ('radar', radar), ('terminal', terminal),
-       ('galaxy', galaxy), ('equalizer', equalizer), ('himalaya', himalaya), ('sky', sky)]
+ALL = [('terminal', terminal), ('galaxy', galaxy)]   # the others were removed from the README on 2026-11-06
 
 if __name__ == '__main__':
     D = fetch(); S = stats(D); OUT.mkdir(exist_ok=True)

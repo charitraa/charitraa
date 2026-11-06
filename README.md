@@ -136,78 +136,18 @@ Bash       6 mins                ▓░░░░░░░░░░░░░░�
 
 ---
 
-### `> ./arcade --live`
+### `> neofetch && ./galaxy`
 
 <!-- Profile art: every image below is redrawn from live GitHub stats every 6 hours by .github/workflows/profile-art.yml.
      To remove one, delete its block from ART:name to /ART:name (and its function in gen/build.py if you like). -->
-
-<!-- ART:sky -->
-<p align="center"><img src="art/sky.svg" width="100%" alt="🌄 Live Kathmandu sky" /></p>
-<!-- /ART:sky -->
-
-<!-- ART:koi -->
-<p align="center"><img src="art/koi.svg" width="100%" alt="🐟 Living koi" /></p>
-<!-- /ART:koi -->
 
 <!-- ART:terminal -->
 <p align="center"><img src="art/terminal.svg" width="100%" alt="💻 Animated terminal" /></p>
 <!-- /ART:terminal -->
 
-<!-- ART:cartridge -->
-<p align="center"><img src="art/cartridge.svg" width="100%" alt="🕹️ Game cartridge" /></p>
-<!-- /ART:cartridge -->
-
-<!-- ART:himalaya -->
-<p align="center"><img src="art/himalaya.svg" width="100%" alt="🏔️ Your Himalaya" /></p>
-<!-- /ART:himalaya -->
-
-<!-- ART:everest -->
-<p align="center"><img src="art/everest.svg" width="100%" alt="🏔️ Everest climb" /></p>
-<!-- /ART:everest -->
-
 <!-- ART:galaxy -->
 <p align="center"><img src="art/galaxy.svg" width="100%" alt="🌌 Galaxy of commits" /></p>
 <!-- /ART:galaxy -->
-
-<!-- ART:pet -->
-<p align="center"><img src="art/pet.svg" width="100%" alt="🐉 Dev pet" /></p>
-<!-- /ART:pet -->
-
-<!-- ART:kites -->
-<p align="center"><img src="art/kites.svg" width="100%" alt="🪁 Dashain kite sky" /></p>
-<!-- /ART:kites -->
-
-<!-- ART:tihar -->
-<p align="center"><img src="art/tihar.svg" width="100%" alt="🪔 Tihar lights" /></p>
-<!-- /ART:tihar -->
-
-<!-- ART:traffic -->
-<p align="center"><img src="art/traffic.svg" width="100%" alt="🛺 Kathmandu traffic" /></p>
-<!-- /ART:traffic -->
-
-<!-- ART:bonsai -->
-<p align="center"><img src="art/bonsai.svg" width="100%" alt="🌳 Code bonsai" /></p>
-<!-- /ART:bonsai -->
-
-<!-- ART:rocket -->
-<p align="center"><img src="art/rocket.svg" width="100%" alt="🚀 Weekly launch" /></p>
-<!-- /ART:rocket -->
-
-<!-- ART:cards -->
-<p align="center"><img src="art/cards.svg" width="100%" alt="🃏 Project trading cards" /></p>
-<!-- /ART:cards -->
-
-<!-- ART:radar -->
-<p align="center"><img src="art/radar.svg" width="100%" alt="🛰️ Repo radar" /></p>
-<!-- /ART:radar -->
-
-<!-- ART:matrix -->
-<p align="center"><img src="art/matrix.svg" width="100%" alt="🟩 Commit rain" /></p>
-<!-- /ART:matrix -->
-
-<!-- ART:equalizer -->
-<p align="center"><img src="art/equalizer.svg" width="100%" alt="🎵 Commit equalizer" /></p>
-<!-- /ART:equalizer -->
 
 ---
 
