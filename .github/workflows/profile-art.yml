@@ -1,0 +1,34 @@
+name: Profile art
+
+on:
+  schedule:
+    - cron: '7 0,6,12,18 * * *'   # 05:52 / 11:52 / 17:52 / 23:52 Nepal time: sunrise, day, sunset, night
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-art
+  cancel-in-progress: true
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Draw the art from live stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python gen/build.py
+      - name: Commit if anything changed
+        run: |
+          git add art
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Profile art refresh [skip ci]"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
