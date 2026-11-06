@@ -1,5 +1,5 @@
 {
- "fen": "rnbqkbnr/ppppppp1/7p/8/8/N7/PPPPPPPP/R1BQKBNR w KQkq - 0 2",
+ "fen": "rnbqkbnr/ppppppp1/7p/8/8/N6N/PPPPPPPP/R1BQKB1R b KQkq - 1 2",
  "moves": [
   {
    "uci": "b1a3",
@@ -12,10 +12,16 @@
    "san": "h6",
    "user": "charitraa",
    "date": "2026-11-06"
+  },
+  {
+   "uci": "g1h3",
+   "san": "Nh3",
+   "user": "charitraa",
+   "date": "2026-11-06"
   }
  ],
  "players": {
-  "charitraa": 2
+  "charitraa": 3
  },
  "games": 0
 }
