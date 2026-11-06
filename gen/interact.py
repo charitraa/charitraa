@@ -126,7 +126,7 @@ def chess_render(st):
                               for i, (u, n) in enumerate(top)) or 'nobody yet: be the first!'
     recent = ' &nbsp;·&nbsp; '.join(f'<img src="https://github.com/{m["user"]}.png?size=40" width="18" height="18" alt=""/> <code>{m["san"]}</code> by @{m["user"]}'
                                     for m in st['moves'][-4:][::-1]) or 'no moves yet'
-    status = badge(f'{"⚪ White" if white else "⚫ Black"} to move · Move {board.fullmove_number}', '00ff9c' if white else '7c3aed')
+    status = badge(f'{"⚪ White" if white else "⚫ Black"} to move · Move {board.fullmove_number}', '15803d' if white else '7c3aed')   # dark green: white text stays readable
     if board.is_check():
         status = badge(f'{"⚪ White" if white else "⚫ Black"} is in CHECK · Move {board.fullmove_number}', 'e5484d')
     v = f'{st["games"]}-{len(st["moves"])}'   # new URL after every move, so browsers don't show a cached board
